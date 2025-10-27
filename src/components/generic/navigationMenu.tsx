@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { cn } from "@/utils/cn";
 
 type NavigationMenuProps = React.ComponentProps<typeof RadixNavigationMenu.Root>;

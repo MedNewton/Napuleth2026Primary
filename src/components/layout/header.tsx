@@ -3,23 +3,10 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PlainContentItem } from "../generic/plainContentItem";
 import { Stack, Typography, Button, IconButton } from "@mui/material";
 import theme from "@/theme/theme";
 
 import logo from "@/assets/images/logo/Asset 194.svg?url";
-
-import menuSmartContracts from "@/assets/images/icons/menu-smart-contracts.webp"
-import menuInfra from "@/assets/images/icons/menu-infrastructure.webp"
-import menuAI from "@/assets/images/icons/menu-ai.webp"
-import menuDev from "@/assets/images/icons/menu-dev.webp"
-import menuGTM from "@/assets/images/icons/menu-gtm.webp"
-
-import menuLaunch from "@/assets/images/icons/menu-launch.webp"
-import menuExplore from "@/assets/images/icons/menu-explore.webp"
-
-import menuTeam from "@/assets/images/icons/menu-team.webp"
-import menuPortfolio from "@/assets/images/icons/menu-portfolio.webp"
 
 import { FiSearch } from "react-icons/fi";
 
@@ -29,7 +16,6 @@ import {
     NavigationMenuItem,
     NavigationMenuTrigger,
     NavigationMenuContent,
-    NavigationMenuLink,
     NavigationMenuContentItem,
 } from "@/components/generic/navigationMenu";
 
