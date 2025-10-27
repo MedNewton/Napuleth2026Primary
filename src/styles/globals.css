@@ -189,3 +189,9 @@ a {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
 }
+
+.no-select, .no-select * {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* old Edge */
+}
