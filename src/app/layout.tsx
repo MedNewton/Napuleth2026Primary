@@ -6,8 +6,8 @@ import ThemeRegistry from "@/components/layout/ThemeRegistry";
 import Header from "@/components/layout/header";
 
 export const metadata: Metadata = {
-  title: "MGS | Mood Global Services",
-  description: "Shape the future: Bespoke blockchain tech at your fingertips.",
+  title: "NapulETH 2026 | Biggest Web3 event in southern Italy",
+  description: "NapulETH 2026 is the biggest Web3 event in southern Italy.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
