@@ -1,7 +1,6 @@
-// TestimonialsCarousel.tsx
 "use client";
 
-import { useRef, forwardRef, useState } from "react"; // ← added useState
+import { useRef, forwardRef, useState } from "react";
 import Carousel, { type ResponsiveType } from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {
@@ -63,7 +62,6 @@ const responsive: ResponsiveType = {
     },
 };
 
-// custom dot (small rounded chips like the image)
 const Dot = forwardRef<
     HTMLButtonElement,
     { onClick?: () => void; active?: boolean }
@@ -88,7 +86,6 @@ export default function TestimonialsCarousel() {
     const theme = useTheme();
     const carouselRef = useRef<Carousel | null>(null);
 
-    // ← track the current slide index
     const [current, setCurrent] = useState(0);
     const lastIndex = data.length - 1;
 
@@ -96,11 +93,9 @@ export default function TestimonialsCarousel() {
         <Box
             position="relative"
             sx={{
-                // give some breathing room around the carousel
                 py: { xs: 2, md: 3 },
             }}
         >
-            {/* LEFT fade — hidden on first slide */}
             {current > 0 && (
                 <Box
                     aria-hidden
@@ -110,14 +105,13 @@ export default function TestimonialsCarousel() {
                         zIndex: 2,
                         left: 0,
                         top: 0,
-                        bottom: 32, // leave space for dots
+                        bottom: 32,
                         width: { xs: 32, sm: 64, md: 96 },
                         background: `linear-gradient(90deg, ${theme.palette.common.white} 0%, rgba(255,255,255,0) 100%)`,
                     }}
                 />
             )}
 
-            {/* RIGHT fade — hidden on last slide */}
             {current < lastIndex && (
                 <Box
                     aria-hidden
@@ -143,22 +137,19 @@ export default function TestimonialsCarousel() {
                 swipeable
                 infinite={false}
                 showDots
-                // dots like screenshot (inside a light rounded pill)
                 renderDotsOutside={true}
                 customDot={<Dot />}
                 customTransition="transform 400ms ease"
                 transitionDuration={400}
                 containerClass="carousel-container"
-                itemClass="px-1 md:px-1" // spacing between items
+                itemClass="px-1 md:px-1"
                 dotListClass="custom-dot-list"
-                // ← update current index after slide change
                 afterChange={(_prev, { currentSlide }) => setCurrent(currentSlide ?? 0)}
             >
                 {data.map((t, idx) => (
                     <Box
                         key={idx}
                         onClick={() => {
-                            // center the clicked slide (left-aligned in this lib)
                             carouselRef.current?.goToSlide(idx, true);
                         }}
                         sx={{ cursor: "pointer" }}
@@ -166,8 +157,8 @@ export default function TestimonialsCarousel() {
                         <Stack
                             className="no-select"
                             sx={{
-                                bgcolor: (t) => t.palette.brand.napulETHGrey1.main, // your requested bg
-                                borderRadius: 3, // large round corners
+                                bgcolor: (t) => t.palette.brand.napulETHGrey1.main,
+                                borderRadius: 3,
                                 p: { xs: 2, md: 3 },
                                 minHeight: { xs: 180, md: 220 },
                                 pointerEvents: "none",
@@ -193,15 +184,14 @@ export default function TestimonialsCarousel() {
                 ))}
             </Carousel>
 
-            {/* Local CSS overrides for the dot rail — centered */}
             <style jsx global>{`
         .custom-dot-list {
           position: relative;
-          display: flex;                 /* center the dot list */
+          display: flex;
           align-items: center;
           justify-content: center;
           width: fit-content;
-          margin: 8px auto 0;            /* this centers the whole rail horizontally */
+          margin: 8px auto 0;
           padding: 6px 10px;
           background: rgba(0, 0, 0, 0.06);
           border-radius: 9999px;
