@@ -276,13 +276,12 @@ function ContentBlock({
         width="100%"
         direction="row"
         alignItems="start"
-        justifyContent="space-between"
-        gap={1}
+        gap={2}
       >
-        <Typography variant="h5" fontWeight={700}>
+        <Typography variant="h5" fontWeight={600}>
           {title}
         </Typography>
-        <Typography variant="body1" sx={{ opacity: 0.75 }}>
+        <Typography variant="subtitle1" sx={{ opacity: 0.75, width: "90%", fontWeight: 500 }}>
           {description}
         </Typography>
       </Stack>
