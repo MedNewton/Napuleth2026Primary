@@ -11,11 +11,11 @@ declare module "@mui/material/styles" {
 const brand: BrandPaletteOptions = brandColors;
 
 const palette: PaletteOptions = {
-  primary: { main: "#000000" },
+  primary: { main: "#FFFFFF" },
   secondary: { main: "#8F8E8E" },
-  background: { default: "#FFFFFF" },
-  text: { primary: "#000000", secondary: "#8F8E8E" },
-  info: { main: "#000000" },
+  background: { default: "#0B0B0B" },
+  text: { primary: "#FFFFFF", secondary: "#8F8E8E" },
+  info: { main: "#FFFFFF" },
   error: { main: "#DC2626" },
   success: { main: "#389685" },
   brand, // typed, not any

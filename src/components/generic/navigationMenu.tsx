@@ -60,7 +60,7 @@ export function NavigationMenuTrigger({ className, children, ...props }: Navigat
         "bg-transparent text-white font-medium text-sm",
         "border-b border-transparent outline-none select-none transition-all",
         // pill hover like Link:
-        "hover:rounded-[10rem] hover:bg-[#F0F0EF]",
+        "hover:rounded-[10rem] hover:bg-[#292929]",
         // optional: tone down the old dark hover/ focus styles:
         // "hover:border-b-[#575757]",
         // "focus-visible:bg-[#1D1D1D] focus-visible:border-b-[#575757]",
@@ -81,7 +81,7 @@ export function NavigationMenuContent({ className, ...props }: NavigationMenuCon
       data-slot="navigation-menu-content"
       className={cn(
         "top-full left-0 p-1 mt-1.5 z-50 w-full overflow-hidden rounded-xl md:absolute md:left-1/2 md:w-auto md:-translate-x-1/2",
-        "bg-[#ffffff] border-[#E5E5E5] shadow-sm shadow-gray-300",
+        "bg-[#292929] border-[#4D4A4A] shadow-sm shadow-gray-950",
         "motion-safe:data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52",
         "motion-safe:data-[motion=to-end]:slide-out-to-right-52 motion-safe:data-[motion=to-start]:slide-out-to-left-52",
         "motion-safe:data-[state=closed]:zoom-out-95 motion-safe:data-[state=open]:zoom-in-95 motion-safe:data-[motion^=from-]:animate-in motion-safe:data-[motion^=to-]:animate-out",

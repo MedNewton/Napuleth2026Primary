@@ -6,17 +6,17 @@
 
 @theme {
   /* Map these to your design system / MUI palette */
-  --color-main-background: #FFFFFF;
+  --color-main-background: #0B0B0B;
   /* page bg */
-  --color-main-foreground: #000000;
+  --color-main-foreground: #FFFFFF;
   /* menu item hover bg */
-  --color-main-muted: #000000;
+  --color-main-muted: #FFFFFF;
   /* dropdown panel bg */
   --color-primary: #000000;
   /* primary text */
-  --color-primary-muted: #000000;
+  --color-primary-muted: #FFFFFF;
   /* secondary text */
-  --color-border: #000000;
+  --color-border: #FFFFFF;
   /* subtle borders */
 }
 
@@ -24,7 +24,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #ffffff !important;
+  background-color: #0B0B0B!important;
   overflow-x: hidden !important;
   height: 100%;
 }

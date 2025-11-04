@@ -71,13 +71,7 @@ export default function Hero() {
       position="relative"
       overflow="hidden"
     >
-      <AnimatedHeroGraphic
-        className="w-full mx-auto -ml-6"
-        style={{ position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 }}
-        baseDelay={tImage}
-        stagger={0.18}
-        duration={0.8}
-      />
+
 
       <Stack gap={2} sx={{ position: "relative", zIndex: 2 }}>
         <motion.div
@@ -93,27 +87,29 @@ export default function Hero() {
             gap={0.5}
             width="fit-content"
             sx={{
-              backgroundColor: theme.palette.brand.napulETHGrey1.main,
+              backgroundColor: theme.palette.brand.napulETHYellow2.main,
               borderRadius: "10rem",
               px: 1.5,
             }}
           >
-            <Typography variant="caption" fontWeight={600}>
-              The Horizon RWA market is live on Aave
+            <Typography variant="caption" fontWeight={600} color={theme.palette.background.default}>
+              Subscription to our hackathon is now open
             </Typography>
-            <Typography variant="h6" color={theme.palette.secondary.main}>
+            <Typography variant="h6" color={theme.palette.background.default}>
               &bull;
             </Typography>
-            <Typography variant="caption" fontWeight={400} color={theme.palette.secondary.main}>
+            <Typography variant="caption" fontWeight={400} color={theme.palette.background.default}>
               Learn more
             </Typography>
-            <LiaLongArrowAltRightSolid size={16} color={theme.palette.secondary.main} />
+            <LiaLongArrowAltRightSolid size={16} color={theme.palette.background.default} />
           </Stack>
         </motion.div>
 
-        <WordReveal text="DeFi's largest lending network." variant="h3" delay={tTitles} />
+        <Stack width={"75%"}>
+          <WordReveal text="The Biggest Blockchain Event in Southern Italy" variant="h3" delay={tTitles} />
+        </Stack>
         <WordReveal
-          text="Earn, borrow, save, and swap with millions of users."
+          text="Talks, Panels, Workshops, and more."
           variant="h6"
           color={theme.palette.secondary.main}
           delay={tTitles}
@@ -140,7 +136,7 @@ export default function Hero() {
           }}
         >
           <Typography variant="subtitle1" fontWeight={600}>
-            Get Started
+            Get Your Tickets
           </Typography>
           <HiOutlineArrowRight size={16} strokeWidth={2} />
         </Stack>
@@ -157,16 +153,16 @@ export default function Hero() {
             sx={{
               width: 7,
               height: 7,
-              backgroundColor: theme.palette.brand.napulETHPurple1.main,
+              backgroundColor: theme.palette.brand.napulETHYellow2.main,
               borderRadius: "50%",
             }}
           />
           <Stack direction="row" alignItems="center" gap={0.5}>
             <Typography variant="body2" fontWeight={400} color={theme.palette.primary.main} sx={{ opacity: 0.7 }}>
-              $64.89 billion
+              Villa D&apos;Angri - Naples, Italy
             </Typography>
             <Typography variant="body2" fontWeight={400} color={theme.palette.secondary.main}>
-              deposits currently supplied in Aave.
+              Villa D&apos;Angri - Naples, Italy
             </Typography>
           </Stack>
         </Stack>

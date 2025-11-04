@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Stack, Typography, Button, IconButton } from "@mui/material";
 import theme from "@/theme/theme";
 
-import logo from "@/assets/images/logo/Asset 194.svg?url";
+import logo from "@/assets/images/logo/Asset 192.svg?url";
 
 import { FiSearch } from "react-icons/fi";
 
@@ -18,6 +18,11 @@ import {
     NavigationMenuContent,
     NavigationMenuContentItem,
 } from "@/components/generic/navigationMenu";
+
+import pillar1 from "@/assets/images/hero/pillar1.webp";
+import ornanment1 from "@/assets/images/hero/ornament1.webp";
+import napulethCoin1 from "@/assets/images/hero/napulEthCoin.webp";
+import napulethTickets from "@/assets/images/hero/napulethTickets.webp";
 
 export default function Header() {
     return (
@@ -33,23 +38,36 @@ export default function Header() {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="nav-pill">
                                     <Typography component={"span"} variant="subtitle1" fontWeight={600} color={theme.palette.text.primary}>
-                                        Products
+                                        Event
                                     </Typography>
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <Stack alignItems={"center"}>
                                         <NavigationMenuContentItem href="/services/smart-contracts">
                                             <Stack minWidth={300} gap={1.5} sx={{
-                                                backgroundColor: theme.palette.brand.napulETHPurple1.main,
+                                                backgroundColor: theme.palette.brand.napulETHYellow2.main,
                                                 borderRadius: 2,
                                                 padding: 1,
+                                                position: "relative",
+                                                overflow: "hidden",
                                             }}>
+                                                <Image src={napulethCoin1} alt="ornament1" width={120} height={120} style={{
+                                                    position: "absolute",
+                                                    top: "-20%",
+                                                    right: "-10%",
+                                                    zIndex: 0,
+                                                }} />
                                                 <Stack height={40} width={40} sx={{
                                                     backgroundColor: theme.palette.background.default,
                                                     borderRadius: "50%",
+                                                    position: "relative",
+                                                    zIndex: 1,
                                                 }}>
                                                 </Stack>
-                                                <Stack>
+                                                <Stack sx={{
+                                                    position: "relative",
+                                                    zIndex: 1,
+                                                }}>
                                                     <Typography component="span" variant="subtitle1" fontWeight={600} color={theme.palette.background.default}>Apps</Typography>
                                                     <Typography component="span" variant="body2" color={theme.palette.background.default}>Interact with Aave easily and securely.</Typography>
                                                 </Stack>
@@ -57,16 +75,29 @@ export default function Header() {
                                         </NavigationMenuContentItem>
                                         <NavigationMenuContentItem href="/services/smart-contracts">
                                             <Stack minWidth={300} gap={1.5} sx={{
-                                                backgroundColor: theme.palette.brand.napulETHGreen1.main,
+                                                backgroundColor: theme.palette.brand.napulETHYellow2.main,
                                                 borderRadius: 2,
                                                 padding: 1,
+                                                position: "relative",
+                                                overflow: "hidden",
                                             }}>
+                                                <Image src={napulethTickets} alt="ornament1" width={150} height={150} style={{
+                                                    position: "absolute",
+                                                    top: "-20%",
+                                                    right: "-10%",
+                                                    zIndex: 0,
+                                                }} />
                                                 <Stack height={40} width={40} sx={{
                                                     backgroundColor: theme.palette.background.default,
                                                     borderRadius: "50%",
+                                                    position: "relative",
+                                                    zIndex: 1,
                                                 }}>
                                                 </Stack>
-                                                <Stack>
+                                                <Stack sx={{
+                                                    position: "relative",
+                                                    zIndex: 1,
+                                                }}>
                                                     <Typography component="span" variant="subtitle1" fontWeight={600} color={theme.palette.background.default}>GHO</Typography>
                                                     <Typography component="span" variant="body2" color={theme.palette.background.default}>The Aave native stablecoin.</Typography>
                                                 </Stack>
@@ -153,14 +184,14 @@ export default function Header() {
                                         </NavigationMenuContentItem>
                                         <NavigationMenuContentItem href="/services/smart-contracts" className="flex flex-1"  >
                                             <Stack minWidth={200} className="h-full" height={"100%"} gap={1.5} sx={{
-                                                backgroundColor: theme.palette.brand.napulETHBlue1.main,
+                                                backgroundColor: theme.palette.brand.napulETHYellow2.main,
                                                 borderRadius: 2,
                                                 padding: 1,
                                                 display: "flex",
                                                 flex: 1,
                                                 flexGrow: 1,
                                             }}>
-
+                                                <Image src={ornanment1} alt="ornanment1" fill style={{ objectFit: "cover" }} />
                                             </Stack>
                                         </NavigationMenuContentItem>
                                     </Stack>
@@ -235,14 +266,14 @@ export default function Header() {
                                         </NavigationMenuContentItem>
                                         <NavigationMenuContentItem href="/services/smart-contracts" className="flex flex-1"  >
                                             <Stack minWidth={200} className="h-full" height={"100%"} gap={1.5} sx={{
-                                                backgroundColor: theme.palette.brand.napulETHPurple1.main,
+                                                backgroundColor: theme.palette.brand.napulETHYellow1.main,
                                                 borderRadius: 2,
                                                 padding: 1,
                                                 display: "flex",
                                                 flex: 1,
                                                 flexGrow: 1,
                                             }}>
-
+                                                <Image src={pillar1} alt="pillar1" fill style={{ objectFit: "cover" }} />
                                             </Stack>
                                         </NavigationMenuContentItem>
                                     </Stack>
@@ -253,24 +284,24 @@ export default function Header() {
                     <Stack direction={"row"} alignItems={"center"} gap={1}>
                         <Button variant="contained" color="primary" sx={{
                             borderRadius: "10rem",
-                            backgroundColor: theme.palette.primary.main,
+                            backgroundColor: theme.palette.brand.napulETHYellow2.main,
                             textTransform: "none",
                             boxShadow: "none",
                             "&:hover": {
-                                backgroundColor: theme.palette.brand.napulETHGrey3.main,
+                                backgroundColor: theme.palette.brand.napulETHYellow1.main,
                                 boxShadow: "none",
                             }
                         }}>
-                            <Typography component={"span"} variant="subtitle2" fontWeight={500} color={theme.palette.background.default}>
-                                Open App
+                            <Typography component={"span"} variant="subtitle2" fontWeight={600} color={theme.palette.background.default}>
+                                Get Your Tickets
                             </Typography>
                         </Button>
                         <IconButton sx={{
-                            backgroundColor: theme.palette.primary.main,
+                            backgroundColor: theme.palette.brand.napulETHYellow2.main,
                             borderRadius: "50%",
                             boxShadow: "none",
                             "&:hover": {
-                                backgroundColor: theme.palette.brand.napulETHGrey3.main,
+                                backgroundColor: theme.palette.brand.napulETHYellow1.main,
                                 boxShadow: "none",
                             }
                         }}>
