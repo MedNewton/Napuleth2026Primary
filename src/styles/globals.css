@@ -6,7 +6,7 @@
 
 @theme {
   /* Map these to your design system / MUI palette */
-  --color-main-background: #0B0B0B;
+  --color-main-background: #952527;
   /* page bg */
   --color-main-foreground: #FFFFFF;
   /* menu item hover bg */
@@ -24,7 +24,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #0B0B0B!important;
+  background-color: #952527!important;
   overflow-x: hidden !important;
   height: 100%;
 }

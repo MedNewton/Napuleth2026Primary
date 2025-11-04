@@ -92,13 +92,13 @@ export default function Hero() {
               px: 1.5,
             }}
           >
-            <Typography variant="caption" fontWeight={600} color={theme.palette.background.default}>
+            <Typography variant="caption" fontWeight={600} color={theme.palette.info.main}>
               Subscription to our hackathon is now open
             </Typography>
-            <Typography variant="h6" color={theme.palette.background.default}>
+            <Typography variant="h6" color={theme.palette.info.main}>
               &bull;
             </Typography>
-            <Typography variant="caption" fontWeight={400} color={theme.palette.background.default}>
+            <Typography variant="caption" fontWeight={400} color={theme.palette.info.main}>
               Learn more
             </Typography>
             <LiaLongArrowAltRightSolid size={16} color={theme.palette.background.default} />
@@ -111,7 +111,7 @@ export default function Hero() {
         <WordReveal
           text="Talks, Panels, Workshops, and more."
           variant="h6"
-          color={theme.palette.secondary.main}
+          color={theme.palette.text.primary}
           delay={tTitles}
         />
       </Stack>
@@ -158,10 +158,7 @@ export default function Hero() {
             }}
           />
           <Stack direction="row" alignItems="center" gap={0.5}>
-            <Typography variant="body2" fontWeight={400} color={theme.palette.primary.main} sx={{ opacity: 0.7 }}>
-              Villa D&apos;Angri - Naples, Italy
-            </Typography>
-            <Typography variant="body2" fontWeight={400} color={theme.palette.secondary.main}>
+            <Typography variant="body2" fontWeight={400} color={theme.palette.text.primary}>
               Villa D&apos;Angri - Naples, Italy
             </Typography>
           </Stack>

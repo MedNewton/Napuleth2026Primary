@@ -68,8 +68,8 @@ export default function Header() {
                                                     position: "relative",
                                                     zIndex: 1,
                                                 }}>
-                                                    <Typography component="span" variant="subtitle1" fontWeight={600} color={theme.palette.background.default}>Apps</Typography>
-                                                    <Typography component="span" variant="body2" color={theme.palette.background.default}>Interact with Aave easily and securely.</Typography>
+                                                    <Typography component="span" variant="subtitle1" fontWeight={600} color={theme.palette.info.main}>Apps</Typography>
+                                                    <Typography component="span" variant="body2" color={theme.palette.info.main}>Interact with Aave easily and securely.</Typography>
                                                 </Stack>
                                             </Stack>
                                         </NavigationMenuContentItem>
@@ -98,8 +98,8 @@ export default function Header() {
                                                     position: "relative",
                                                     zIndex: 1,
                                                 }}>
-                                                    <Typography component="span" variant="subtitle1" fontWeight={600} color={theme.palette.background.default}>GHO</Typography>
-                                                    <Typography component="span" variant="body2" color={theme.palette.background.default}>The Aave native stablecoin.</Typography>
+                                                    <Typography component="span" variant="subtitle1" fontWeight={600} color={theme.palette.info.main}>GHO</Typography>
+                                                    <Typography component="span" variant="body2" color={theme.palette.info.main}>The Aave native stablecoin.</Typography>
                                                 </Stack>
                                             </Stack>
                                         </NavigationMenuContentItem>
