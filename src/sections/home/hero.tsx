@@ -13,12 +13,14 @@ function WordReveal({
   color,
   fontWeight = 600,
   delay = 0,
+  align = "center",
 }: {
   text: string;
   variant: TypographyProps["variant"];
   color?: string;
   fontWeight?: number;
   delay?: number;
+  align?: "center" | "left" | "right";
 }) {
   const isReduced = useReducedMotion();
   const words = text.split(" ").map((w, i) => ({ w, key: `${w}-${i}` }));
@@ -30,12 +32,12 @@ function WordReveal({
       fontWeight={fontWeight}
       color={color}
       lineHeight={1.2}
-      sx={{ display: "flex", flexWrap: "wrap", gap: "0.4ch" }}
+      sx={{ display: "flex", flexWrap: "wrap", gap: "0.4ch", textAlign: `${align} !important` }}
     >
       {words.map(({ w, key }, idx) => (
         <motion.span
           key={key}
-          style={{ display: "inline-block", whiteSpace: "pre-wrap" }}
+          style={{ display: "inline-block", whiteSpace: "pre-wrap", textAlign: align }}
           initial={isReduced ? { opacity: 0 } : { y: 16, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -73,7 +75,7 @@ export default function Hero() {
     >
 
 
-      <Stack gap={2} sx={{ position: "relative", zIndex: 2 }}>
+      <Stack gap={2} alignItems={"center"} sx={{ position: "relative", zIndex: 2 }}>
         <motion.div
           initial={isReduced ? { opacity: 0 } : { y: 18, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -105,8 +107,8 @@ export default function Hero() {
           </Stack>
         </motion.div>
 
-        <Stack width={"75%"}>
-          <WordReveal text="The Biggest Blockchain Event in Southern Italy" variant="h3" delay={tTitles} />
+        <Stack width={"75%"} alignItems={"center"}>
+          <WordReveal text="The Biggest Blockchain Event in Southern Italy" variant="h3" delay={tTitles} align="center" />
         </Stack>
         <WordReveal
           text="Talks, Panels, Workshops, and more."
